@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>
+ Pedra, Papel ou Tesoura
+ </title>
+ 
+ <style>
+ body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+ .logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 150px;
+  width: auto;
+}
+ .container {
+  background: url('https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+ button {
+  background-color: #ff1b7b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1ABC9C;
+}
+ footer {
+  text-align: center;
+  padding: 10px;
+}
+ </style>
+ 
+</head>
+
+<body>
+  <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
+
+  <div class="container">
+    <div class="content">
+      <h2>Pra ganhar é preciso arriscar!</h2>
+      <p> PEDRA, PAPEL ou TESOURA?</p>
+      <button onclick="jogar()">Bora jogar!</button>
+    </div>
+  </div>
+ 
+ <script>
+idade = prompt("Quantos anos voce tem?")
+if(idade >= 18) {
+ alert("voce pode jogar jokenpo")
+}
+if (idade >= 18) {
+ escolhaJogador = prompt("Digite 1-Pedra, 2-papel ou 3-tesoura?")
+  escolhaComputador = Math.floor(Math.random() * 3) + 1;
+ 
+ if (escolhaJogador == escolhaComputador) {
+  alert("empate!!")
+  
+  alert("escolhaComputador: " + escolhaComputador)
+ }
+ 
+ if (escolhaJogador == 1) {
+  if(escolhaComputador == 2) 
+   alert("Computador venceu, escolheu papel");
+ }
+  if(escolhaJogador == 2) {
+   if(escolhaComputador == 3)
+   alert("Computador venceu, escolheu papel")
+  }
+}
+</script>
+ 
+  <footer>Alura - Imersão DEV - 2025</footer>
+</body>
+
+</html>
